@@ -38,21 +38,110 @@ MainWindow::MainWindow(QString initialTarget, QWidget* parent)
 void MainWindow::buildUi()
 {
     setWindowTitle("Dong Image Viewer");
-    resize(1280, 820);
+    resize(1440, 900);
+
+    qApp->setStyleSheet(R"(
+        QMainWindow { background:#1e1f22; }
+        QToolBar { background:#2b2d31; border:none; spacing:6px; padding:8px; }
+        QToolButton { color:white; padding:6px 10px; border-radius:6px; }
+        QToolButton:hover { background:#3b3f45; }
+        QListWidget { background:#25262b; color:white; border:none; }
+        QListWidget::item { padding:8px; margin:2px; }
+        QListWidget::item:selected { background:#4c78ff; }
+        QTableWidget { background:#25262b; color:white; gridline-color:#444; }
+        QHeaderView::section { background:#2b2d31; color:white; }
+        QStatusBar { background:#2b2d31; color:white; }
+        QComboBox { background:#2b2d31; color:white; padding:4px; }
+        QMenuBar { background:#2b2d31; color:white; }
+        QMenuBar::item:selected { background:#3b3f45; }
+        QMenu { background:#25262b; color:white; }
+        QMenu::item:selected { background:#4c78ff; }
+    )");
+
+    // Add menu bar
+    auto* menuBar = new QMenuBar(this);
+    setMenuBar(menuBar);
+    auto* viewMenu = menuBar->addMenu("View");
+    
+    auto* toggleMetadataAction = viewMenu->addAction("Show Metadata");
+    toggleMetadataAction->setCheckable(true);
+    toggleMetadataAction->setChecked(true);
+    connect(toggleMetadataAction, &QAction::triggered, this, [this](bool checked) {
+        if (metadataDock_) metadataDock_->setVisible(checked);
+    });
 
     auto* toolbar = addToolBar("Main");
-    toolbar->addAction("Open", this, &MainWindow::openDialog)->setShortcut(QKeySequence::Open);
-    toolbar->addAction("Folder", this, &MainWindow::openFolderDialog);
-    toolbar->addAction("Prev", this, &MainWindow::previousImage)->setShortcut(Qt::Key_Left);
-    toolbar->addAction("Next", this, &MainWindow::nextImage)->setShortcut(Qt::Key_Right);
-    toolbar->addAction("Fit", this, &MainWindow::fitToWindow);
-    toolbar->addAction("1:1", this, &MainWindow::actualSize);
-    toolbar->addAction("Zoom +", this, &MainWindow::zoomIn)->setShortcut(QKeySequence::ZoomIn);
-    toolbar->addAction("Zoom -", this, &MainWindow::zoomOut)->setShortcut(QKeySequence::ZoomOut);
-    toolbar->addAction("Rotate", this, &MainWindow::rotateRight);
-    toolbar->addAction("Fullscreen", this, &MainWindow::toggleFullscreen)->setShortcut(Qt::Key_F11);
-    toolbar->addAction("Slideshow", this, &MainWindow::toggleSlideshow);
-    toolbar->addAction("Bookmark", this, &MainWindow::toggleBookmark);
+    toolbar->setMovable(false);
+    commandBar_ = toolbar;
+    toolbar->setIconSize(QSize(24, 24));
+    
+    // Open
+    auto openAction = toolbar->addAction("Open", this, &MainWindow::openDialog);
+    openAction->setShortcut(QKeySequence::Open);
+    QIcon openIcon(":/icons/open.svg");
+    if (!openIcon.isNull()) openAction->setIcon(openIcon);
+    
+    // Folder
+    auto folderAction = toolbar->addAction("Folder", this, &MainWindow::openFolderDialog);
+    QIcon folderIcon(":/icons/folder.svg");
+    if (!folderIcon.isNull()) folderAction->setIcon(folderIcon);
+    
+    // Previous
+    auto prevAction = toolbar->addAction("Prev", this, &MainWindow::previousImage);
+    prevAction->setShortcut(Qt::Key_Left);
+    QIcon prevIcon(":/icons/prev.svg");
+    if (!prevIcon.isNull()) prevAction->setIcon(prevIcon);
+    
+    // Next
+    auto nextAction = toolbar->addAction("Next", this, &MainWindow::nextImage);
+    nextAction->setShortcut(Qt::Key_Right);
+    QIcon nextIcon(":/icons/next.svg");
+    if (!nextIcon.isNull()) nextAction->setIcon(nextIcon);
+    
+    // Fit
+    auto fitAction = toolbar->addAction("Fit", this, &MainWindow::fitToWindow);
+    QIcon fitIcon(":/icons/fit.svg");
+    if (!fitIcon.isNull()) fitAction->setIcon(fitIcon);
+    
+    // Actual Size
+    auto actualAction = toolbar->addAction("1:1", this, &MainWindow::actualSize);
+    QIcon actualIcon(":/icons/actual.svg");
+    if (!actualIcon.isNull()) actualAction->setIcon(actualIcon);
+    
+    // Zoom In
+    auto zoomInAction = toolbar->addAction("Zoom +", this, &MainWindow::zoomIn);
+    zoomInAction->setShortcut(QKeySequence::ZoomIn);
+    QIcon zoomInIcon(":/icons/zoom-in.svg");
+    if (!zoomInIcon.isNull()) zoomInAction->setIcon(zoomInIcon);
+    
+    // Zoom Out
+    auto zoomOutAction = toolbar->addAction("Zoom -", this, &MainWindow::zoomOut);
+    zoomOutAction->setShortcut(QKeySequence::ZoomOut);
+    QIcon zoomOutIcon(":/icons/zoom-out.svg");
+    if (!zoomOutIcon.isNull()) zoomOutAction->setIcon(zoomOutIcon);
+    
+    // Rotate
+    auto rotateAction = toolbar->addAction("Rotate", this, &MainWindow::rotateRight);
+    QIcon rotateIcon(":/icons/rotate.svg");
+    if (!rotateIcon.isNull()) rotateAction->setIcon(rotateIcon);
+    
+    // Fullscreen
+    auto fsAction = toolbar->addAction("Fullscreen", this, &MainWindow::toggleFullscreen);
+    fsAction->setShortcut(Qt::Key_F11);
+    QIcon fsIcon(":/icons/fullscreen.svg");
+    if (!fsIcon.isNull()) fsAction->setIcon(fsIcon);
+    
+    // Slideshow
+    auto slideshowAction = toolbar->addAction("Slideshow", this, &MainWindow::toggleSlideshow);
+    QIcon slideshowIcon(":/icons/slideshow.svg");
+    if (!slideshowIcon.isNull()) slideshowAction->setIcon(slideshowIcon);
+    
+    // Bookmark
+    auto bookmarkAction = toolbar->addAction("Bookmark", this, &MainWindow::toggleBookmark);
+    QIcon bookmarkIcon(":/icons/bookmark.svg");
+    if (!bookmarkIcon.isNull()) bookmarkAction->setIcon(bookmarkIcon);
+    
+    toolbar->addSeparator();
 
     sortCombo_ = new QComboBox(toolbar);
     sortCombo_->addItems({"Sort: Name", "Sort: Date", "Sort: Size", "Sort: Type"});
@@ -60,27 +149,29 @@ void MainWindow::buildUi()
     toolbar->addWidget(sortCombo_);
 
     auto* splitter = new QSplitter(this);
-    list_ = new QListWidget(splitter);
-    list_->setMinimumWidth(260);
-    list_->setMaximumWidth(420);
-    list_->setIconSize(QSize(96, 96));
-    connect(list_, &QListWidget::currentRowChanged, this, &MainWindow::selectIndex);
-    connect(list_, &QListWidget::itemDoubleClicked, this, &MainWindow::openSelectedArchive);
+    
+    // Create thumbnail panel with QScrollArea + GridLayout
+    thumbnailScroll_ = new QScrollArea(splitter);
+    thumbnailScroll_->setMinimumWidth(330);
+    thumbnailScroll_->setMaximumWidth(360);
+    thumbnailScroll_->setWidgetResizable(true);
+    thumbnailScroll_->setStyleSheet("background-color:#25262b; border:none;");
+    
+    thumbnailContainer_ = new QWidget();
+    thumbnailLayout_ = new QGridLayout(thumbnailContainer_);
+    thumbnailLayout_->setSpacing(4);
+    thumbnailLayout_->setContentsMargins(4, 4, 4, 4);
+    thumbnailLayout_->setAlignment(Qt::AlignTop | Qt::AlignLeft);
+    thumbnailScroll_->setWidget(thumbnailContainer_);
+    
+    splitter->addWidget(thumbnailScroll_);
+    imageView_ = new QGraphicsView(imageScene_, splitter);
+    imageView_->setBackgroundBrush(QColor(0x18, 0x1a, 0x1b));
+    imageView_->setRenderHint(QPainter::SmoothPixmapTransform);
+    imageView_->setStyleSheet("border:none;");
 
-    imageLabel_ = new QLabel;
-    imageLabel_->setAlignment(Qt::AlignCenter);
-    imageLabel_->setBackgroundRole(QPalette::Dark);
-    imageLabel_->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
-    imageLabel_->setScaledContents(false);
-
-    scrollArea_ = new QScrollArea(splitter);
-    scrollArea_->setBackgroundRole(QPalette::Dark);
-    scrollArea_->setWidget(imageLabel_);
-    scrollArea_->setWidgetResizable(false);
-    scrollArea_->setAlignment(Qt::AlignCenter);
-
-    splitter->addWidget(list_);
-    splitter->addWidget(scrollArea_);
+    splitter->addWidget(imageView_);
+    splitter->setStretchFactor(0, 0);
     splitter->setStretchFactor(1, 1);
     setCentralWidget(splitter);
 
@@ -90,9 +181,9 @@ void MainWindow::buildUi()
     metadataTable_->verticalHeader()->hide();
     metadataTable_->setEditTriggers(QAbstractItemView::NoEditTriggers);
     metadataTable_->setSelectionBehavior(QAbstractItemView::SelectRows);
-    auto* metadataDock = new QDockWidget("Metadata", this);
-    metadataDock->setWidget(metadataTable_);
-    addDockWidget(Qt::RightDockWidgetArea, metadataDock);
+    metadataDock_ = new QDockWidget("Metadata", this);
+    metadataDock_->setWidget(metadataTable_);
+    addDockWidget(Qt::RightDockWidgetArea, metadataDock_);
 
     slideshowTimer_ = new QTimer(this);
     slideshowTimer_->setInterval(3000);
@@ -131,16 +222,18 @@ void MainWindow::openTarget(const QString& target)
     }
 
     applySort(sortCombo_ ? sortCombo_->currentIndex() : 0);
+    populateList();
 
     currentIndex_ = -1;
     for (int i = 0; i < static_cast<int>(items_.size()); ++i) {
         if (items_[i].isImage()) {
-            list_->setCurrentRow(i);
+            selectIndex(i);
             return;
         }
     }
     currentImage_ = {};
-    imageLabel_->clear();
+    imageScene_->clear();
+    imageItem_ = nullptr;
     statusBar()->showMessage(QString("%1 browsable items loaded.").arg(items_.size()));
 }
 
@@ -160,6 +253,7 @@ void MainWindow::selectIndex(int row)
         return;
     }
     currentIndex_ = row;
+    updateThumbnailSelection(row);
     if (items_[row].isImage()) {
         loadCurrentImage();
     }
@@ -223,7 +317,7 @@ void MainWindow::renderImage()
 
     double scale = zoom_;
     if (fit_) {
-        const QSize viewport = scrollArea_->viewport()->size();
+        const QSize viewport = imageView_->viewport()->size();
         scale = std::min(
             viewport.width() / static_cast<double>(image.width()),
             viewport.height() / static_cast<double>(image.height()));
@@ -233,19 +327,112 @@ void MainWindow::renderImage()
         std::max(1, static_cast<int>(image.width() * scale)),
         std::max(1, static_cast<int>(image.height() * scale)));
     const QPixmap pixmap = QPixmap::fromImage(image.scaled(targetSize, Qt::KeepAspectRatio, Qt::SmoothTransformation));
-    imageLabel_->setPixmap(pixmap);
-    imageLabel_->resize(targetSize);
+    
+    imageScene_->clear();
+    imageItem_ = imageScene_->addPixmap(pixmap);
+    
+    const QRectF itemRect = imageItem_->boundingRect();
+    
+    if (fit_) {
+        // Fit mode: scene rect = viewport size (no scrolling)
+        const QSizeF vpSize = imageView_->viewport()->size();
+        imageView_->setSceneRect(0, 0, vpSize.width(), vpSize.height());
+        imageItem_->setPos((vpSize.width() - itemRect.width()) / 2.0,
+                           (vpSize.height() - itemRect.height()) / 2.0);
+    } else {
+        // Zoom mode: scene rect large enough for scrolling
+        const QSizeF vpSize = imageView_->viewport()->size();
+        const QSizeF sceneSize(std::max(itemRect.width(), vpSize.width()),
+                                std::max(itemRect.height(), vpSize.height()));
+        imageView_->setSceneRect(0, 0, sceneSize.width(), sceneSize.height());
+        imageItem_->setPos((sceneSize.width() - itemRect.width()) / 2.0,
+                           (sceneSize.height() - itemRect.height()) / 2.0);
+        imageView_->resetTransform();
+        imageView_->centerOn(imageItem_);
+    }
 }
 
 void MainWindow::populateList()
 {
-    list_->clear();
+    // Clear existing thumbnails
+    for (auto& pair : thumbnailButtons_) {
+        delete pair.second;
+    }
+    thumbnailButtons_.clear();
+    
+    const int COLS = 3;
+    
     for (int i = 0; i < static_cast<int>(items_.size()); ++i) {
         const VfsItem& item = items_[i];
-        auto* listItem = new QListWidgetItem(itemPrefix(item) + " " + item.displayName);
-        listItem->setToolTip(item.uri);
-        list_->addItem(listItem);
+        auto* btn = new QPushButton();
+        btn->setIconSize(QSize(90, 90));
+        btn->setFixedSize(110, 135);
+        btn->setFlat(true);
+        btn->setStyleSheet(R"(
+            QPushButton {
+                border: 1px solid #444;
+                border-radius: 4px;
+                color: white;
+                background-color: #25262b;
+                padding: 2px;
+            }
+            QPushButton:hover {
+                background-color: #3b3f45;
+            }
+        )");
+        
+        // Set text (filename)
+        QString displayName = itemPrefix(item) + "\n" + item.displayName;
+        btn->setText(displayName);
+        btn->setToolTip(item.uri);
+        
+        // Connect click signal
+        connect(btn, &QPushButton::clicked, this, [this, i]() {
+            selectIndex(i);
+        });
+        
+        // Add to grid (3 columns)
+        int row = i / COLS;
+        int col = i % COLS;
+        thumbnailLayout_->addWidget(btn, row, col);
+        thumbnailButtons_[i] = btn;
+        
+        // Load thumbnail asynchronously via updateItemDecoration
         updateItemDecoration(i);
+    }
+    
+    // Add stretch at bottom to push content to top
+    int lastRow = static_cast<int>(items_.size()) / COLS + (items_.size() % COLS ? 1 : 0);
+    thumbnailLayout_->setRowStretch(lastRow, 1);
+}
+
+void MainWindow::updateThumbnailSelection(int row)
+{
+    for (auto& pair : thumbnailButtons_) {
+        if (pair.first == row) {
+            pair.second->setStyleSheet(R"(
+                QPushButton {
+                    border: 2px solid #4c78ff;
+                    border-radius: 4px;
+                    color: white;
+                    background-color: #3b4c8f;
+                    padding: 2px;
+                }
+            )");
+        } else {
+            pair.second->setStyleSheet(R"(
+                QPushButton {
+                    border: 1px solid #444;
+                    border-radius: 4px;
+                    color: white;
+                    background-color: #25262b;
+                    padding: 2px;
+                }
+                QPushButton:hover {
+                    background-color: #3b3f45;
+                }
+            )");
+        }
     }
 }
 
@@ -278,26 +465,40 @@ void MainWindow::updateMetadata(const ImageMetadata& metadata)
 
 void MainWindow::updateItemDecoration(int row)
 {
-    if (row < 0 || row >= list_->count() || row >= static_cast<int>(items_.size())) {
+    if (row < 0 || row >= static_cast<int>(items_.size())) {
         return;
     }
-    QListWidgetItem* listItem = list_->item(row);
+    
+    // Find button for this row
+    if (thumbnailButtons_.find(row) == thumbnailButtons_.end()) {
+        return;
+    }
+    
+    QPushButton* btn = thumbnailButtons_[row];
     const VfsItem& item = items_[row];
-    QString label = itemPrefix(item) + " " + item.displayName;
+    
+    // Update text with bookmark indicator
+    QString label = itemPrefix(item) + "\n" + item.displayName;
     if (bookmarks_.contains(item.uri)) {
         label = "* " + label;
     }
-    listItem->setText(label);
+    btn->setText(label);
+    
+    // Load and set thumbnail asynchronously
     if (item.isImage()) {
         (void)QtConcurrent::run([this, row, item]() {
             try {
                 const QImage thumb = imageLoader_.loadThumbnail(item);
                 QMetaObject::invokeMethod(this, [this, row, thumb]() {
-                    if (row < 0 || row >= list_->count()) {
+                    if (row < 0 || row >= static_cast<int>(items_.size())) {
                         return;
                     }
-                    list_->item(row)->setIcon(QIcon(QPixmap::fromImage(
-                        thumb.scaled(96, 96, Qt::KeepAspectRatio, Qt::SmoothTransformation))));
+                    if (thumbnailButtons_.find(row) != thumbnailButtons_.end()) {
+                        QPushButton* btn = thumbnailButtons_[row];
+                        QPixmap pixmap = QPixmap::fromImage(
+                            thumb.scaled(90, 90, Qt::KeepAspectRatio, Qt::SmoothTransformation));
+                        btn->setIcon(QIcon(pixmap));
+                    }
                 }, Qt::QueuedConnection);
             } catch (...) {
             }
@@ -314,7 +515,7 @@ void MainWindow::moveToImage(int direction)
     for (std::size_t i = 0; i < items_.size(); ++i) {
         index = (index + direction + static_cast<int>(items_.size())) % static_cast<int>(items_.size());
         if (items_[index].isImage()) {
-            list_->setCurrentRow(index);
+            selectIndex(index);
             return;
         }
     }
@@ -366,7 +567,15 @@ void MainWindow::rotateRight()
 
 void MainWindow::toggleFullscreen()
 {
-    isFullScreen() ? showNormal() : showFullScreen();
+    if (isFullScreen()) {
+        showNormal();
+        if (commandBar_) commandBar_->setVisible(true);
+        statusBar()->setVisible(true);
+    } else {
+        showFullScreen();
+        if (commandBar_) commandBar_->setVisible(false);
+        statusBar()->setVisible(false);
+    }
 }
 
 void MainWindow::toggleSlideshow()
@@ -515,7 +724,7 @@ void MainWindow::firstImage()
 {
     for (int i = 0; i < static_cast<int>(items_.size()); ++i) {
         if (items_[i].isImage()) {
-            list_->setCurrentRow(i);
+            selectIndex(i);
             return;
         }
     }
@@ -525,7 +734,7 @@ void MainWindow::lastImage()
 {
     for (int i = static_cast<int>(items_.size()) - 1; i >= 0; --i) {
         if (items_[i].isImage()) {
-            list_->setCurrentRow(i);
+            selectIndex(i);
             return;
         }
     }
@@ -553,6 +762,9 @@ void MainWindow::keyPressEvent(QKeyEvent* event)
     case Qt::Key_Escape:
         if (isFullScreen()) {
             showNormal();
+            if (commandBar_) commandBar_->setVisible(true);
+            statusBar()->setVisible(true);
+            if (metadataDock_) metadataDock_->setVisible(true);
             event->accept();
             return;
         }

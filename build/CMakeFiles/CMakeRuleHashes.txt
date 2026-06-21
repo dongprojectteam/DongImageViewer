@@ -1,3 +1,4 @@
 # Hashes of file build rules.
 290c2b21d26b92bbfc9d44616d299acf CMakeFiles/DongImageViewer_autogen
 e52fe6810767f59b084063cb35524f59 DongImageViewer_autogen/timestamp
+1945dced3c8a55ff6d0d72f5f84f03fd qrc_resources.cpp

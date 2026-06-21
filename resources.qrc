@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RCC>
+    <qresource prefix="/">
+        <file>icons/open.svg</file>
+        <file>icons/folder.svg</file>
+        <file>icons/prev.svg</file>
+        <file>icons/next.svg</file>
+        <file>icons/fit.svg</file>
+        <file>icons/actual.svg</file>
+        <file>icons/zoom-in.svg</file>
+        <file>icons/zoom-out.svg</file>
+        <file>icons/rotate.svg</file>
+        <file>icons/fullscreen.svg</file>
+        <file>icons/slideshow.svg</file>
+        <file>icons/bookmark.svg</file>
+    </qresource>
+</RCC>

@@ -460,6 +460,23 @@ CMakeFiles/DongImageViewer.dir/DongImageViewer_autogen/mocs_compilation.cpp.obj:
  C:/Qt/6.11.1/mingw_64/include/QtCore/qabstractitemmodel.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QDockWidget \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qdockwidget.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgraphicsitem.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qpainterpath.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGraphicsScene \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgraphicsscene.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qpen.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGraphicsView \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgraphicsview.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qpainter.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qtextoption.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qscrollarea.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGridLayout \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgridlayout.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayout.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayoutitem.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qboxlayout.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/QKeyEvent \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qevent.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qcoreevent.h \
@@ -487,32 +504,27 @@ CMakeFiles/DongImageViewer.dir/DongImageViewer_autogen/mocs_compilation.cpp.obj:
  C:/Qt/6.11.1/mingw_64/include/QtCore/qcoreapplication_platform.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qinputmethod.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qguiapplication_platform.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLabel \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlabel.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qpicture.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qtextdocument.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QListWidget \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlistwidget.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlistview.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractitemview.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractscrollarea.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qitemselectionmodel.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMainWindow \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmainwindow.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMenuBar \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmenubar.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmenu.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/QPixmapCache \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qpixmapcache.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QPushButton \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qpushbutton.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractbutton.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QScrollArea \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qscrollarea.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/QSet \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QTableWidget \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtablewidget.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtableview.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractitemview.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qitemselectionmodel.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QToolBar \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtoolbar.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/QTimer \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qtimer.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qtextcursor.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qtextformat.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qpen.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qtextoption.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qtmochelpers.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qtmocconstants.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/q20algorithm.h

@@ -7,16 +7,22 @@
 
 #include <QComboBox>
 #include <QDockWidget>
+#include <QGraphicsPixmapItem>
+#include <QGraphicsScene>
+#include <QGraphicsView>
+#include <QGridLayout>
 #include <QImage>
 #include <QKeyEvent>
-#include <QLabel>
-#include <QListWidget>
 #include <QMainWindow>
+#include <QMenuBar>
+#include <QPixmapCache>
+#include <QPushButton>
 #include <QScrollArea>
 #include <QSet>
 #include <QTableWidget>
 #include <QToolBar>
 #include <QTimer>
+#include <map>
 #include <vector>
 
 class MainWindow : public QMainWindow {
@@ -53,18 +59,26 @@ private:
     bool fit_ = true;
     QSet<QString> bookmarks_;
 
-    QListWidget* list_ = nullptr;
-    QLabel* imageLabel_ = nullptr;
-    QScrollArea* scrollArea_ = nullptr;
+    QScrollArea* thumbnailScroll_ = nullptr;
+    QWidget* thumbnailContainer_ = nullptr;
+    QGridLayout* thumbnailLayout_ = nullptr;
+    std::map<int, QPushButton*> thumbnailButtons_;
+    QGraphicsView* imageView_ = nullptr;
+    QGraphicsScene* imageScene_ = nullptr;
+    QGraphicsPixmapItem* imageItem_ = nullptr;
     QTableWidget* metadataTable_ = nullptr;
+    QDockWidget* metadataDock_ = nullptr;
     QComboBox* sortCombo_ = nullptr;
     QTimer* slideshowTimer_ = nullptr;
+    QToolBar* commandBar_ = nullptr;
 
     void buildUi();
     void openTarget(const QString& target);
     void loadCurrentImage();
     void renderImage();
     void populateList();
+    void updateThumbnailSelection(int row);
+    void onThumbnailClicked(int index);
     void updateMetadata(const ImageMetadata& metadata);
     void updateItemDecoration(int row);
     void moveToImage(int direction);

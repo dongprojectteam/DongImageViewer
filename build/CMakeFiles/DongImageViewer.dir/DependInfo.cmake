@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/Development/DongImageViewer/build/DongImageViewer_autogen/mocs_compilation.cpp" "CMakeFiles/DongImageViewer.dir/DongImageViewer_autogen/mocs_compilation.cpp.obj" "gcc" "CMakeFiles/DongImageViewer.dir/DongImageViewer_autogen/mocs_compilation.cpp.obj.d"
+  "D:/Development/DongImageViewer/build/qrc_resources.cpp" "CMakeFiles/DongImageViewer.dir/qrc_resources.cpp.obj" "gcc" "CMakeFiles/DongImageViewer.dir/qrc_resources.cpp.obj.d"
   "D:/Development/DongImageViewer/src/MainWindow.cpp" "CMakeFiles/DongImageViewer.dir/src/MainWindow.cpp.obj" "gcc" "CMakeFiles/DongImageViewer.dir/src/MainWindow.cpp.obj.d"
   "D:/Development/DongImageViewer/src/core/AppPaths.cpp" "CMakeFiles/DongImageViewer.dir/src/core/AppPaths.cpp.obj" "gcc" "CMakeFiles/DongImageViewer.dir/src/core/AppPaths.cpp.obj.d"
   "D:/Development/DongImageViewer/src/core/ImageLoader.cpp" "CMakeFiles/DongImageViewer.dir/src/core/ImageLoader.cpp.obj" "gcc" "CMakeFiles/DongImageViewer.dir/src/core/ImageLoader.cpp.obj.d"

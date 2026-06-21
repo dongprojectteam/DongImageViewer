@@ -6,9 +6,11 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-find_package(Qt6 REQUIRED COMPONENTS Widgets Concurrent)
+find_package(Qt6 REQUIRED COMPONENTS Widgets Concurrent Svg)
 
 qt_standard_project_setup()
+
+qt_add_resources(RESOURCES resources.qrc)
 
 qt_add_executable(DongImageViewer
     src/main.cpp
@@ -31,12 +33,14 @@ qt_add_executable(DongImageViewer
     src/core/VfsItem.h
     src/core/ZipReader.cpp
     src/core/ZipReader.h
+    ${RESOURCES}
 )
 
 target_link_libraries(DongImageViewer
     PRIVATE
         Qt6::Widgets
         Qt6::Concurrent
+        Qt6::Svg
         z
 )
 

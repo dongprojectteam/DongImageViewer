@@ -68,11 +68,29 @@ include CMakeFiles/DongImageViewer.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/DongImageViewer.dir/flags.make
 
+qrc_resources.cpp: D:/Development/DongImageViewer/resources.qrc
+qrc_resources.cpp: D:/Development/DongImageViewer/icons/open.svg
+qrc_resources.cpp: D:/Development/DongImageViewer/icons/folder.svg
+qrc_resources.cpp: D:/Development/DongImageViewer/icons/prev.svg
+qrc_resources.cpp: D:/Development/DongImageViewer/icons/next.svg
+qrc_resources.cpp: D:/Development/DongImageViewer/icons/fit.svg
+qrc_resources.cpp: D:/Development/DongImageViewer/icons/actual.svg
+qrc_resources.cpp: D:/Development/DongImageViewer/icons/zoom-in.svg
+qrc_resources.cpp: D:/Development/DongImageViewer/icons/zoom-out.svg
+qrc_resources.cpp: D:/Development/DongImageViewer/icons/rotate.svg
+qrc_resources.cpp: D:/Development/DongImageViewer/icons/fullscreen.svg
+qrc_resources.cpp: D:/Development/DongImageViewer/icons/slideshow.svg
+qrc_resources.cpp: D:/Development/DongImageViewer/icons/bookmark.svg
+qrc_resources.cpp: resources.qrc.depends
+qrc_resources.cpp: C:/Qt/6.11.1/mingw_64/bin/rcc.exe
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=D:\Development\DongImageViewer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating qrc_resources.cpp"
+	C:\Qt\6.11.1\mingw_64\bin\rcc.exe --no-zstd --name resources --output D:/Development/DongImageViewer/build/qrc_resources.cpp D:/Development/DongImageViewer/resources.qrc
+
 CMakeFiles/DongImageViewer.dir/DongImageViewer_autogen/mocs_compilation.cpp.obj: CMakeFiles/DongImageViewer.dir/flags.make
 CMakeFiles/DongImageViewer.dir/DongImageViewer_autogen/mocs_compilation.cpp.obj: CMakeFiles/DongImageViewer.dir/includes_CXX.rsp
 CMakeFiles/DongImageViewer.dir/DongImageViewer_autogen/mocs_compilation.cpp.obj: DongImageViewer_autogen/mocs_compilation.cpp
 CMakeFiles/DongImageViewer.dir/DongImageViewer_autogen/mocs_compilation.cpp.obj: CMakeFiles/DongImageViewer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Development\DongImageViewer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DongImageViewer.dir/DongImageViewer_autogen/mocs_compilation.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Development\DongImageViewer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DongImageViewer.dir/DongImageViewer_autogen/mocs_compilation.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DongImageViewer.dir/DongImageViewer_autogen/mocs_compilation.cpp.obj -MF CMakeFiles\DongImageViewer.dir\DongImageViewer_autogen\mocs_compilation.cpp.obj.d -o CMakeFiles\DongImageViewer.dir\DongImageViewer_autogen\mocs_compilation.cpp.obj -c D:\Development\DongImageViewer\build\DongImageViewer_autogen\mocs_compilation.cpp
 
 CMakeFiles/DongImageViewer.dir/DongImageViewer_autogen/mocs_compilation.cpp.i: cmake_force
@@ -87,7 +105,7 @@ CMakeFiles/DongImageViewer.dir/src/main.cpp.obj: CMakeFiles/DongImageViewer.dir/
 CMakeFiles/DongImageViewer.dir/src/main.cpp.obj: CMakeFiles/DongImageViewer.dir/includes_CXX.rsp
 CMakeFiles/DongImageViewer.dir/src/main.cpp.obj: D:/Development/DongImageViewer/src/main.cpp
 CMakeFiles/DongImageViewer.dir/src/main.cpp.obj: CMakeFiles/DongImageViewer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Development\DongImageViewer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DongImageViewer.dir/src/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Development\DongImageViewer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DongImageViewer.dir/src/main.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DongImageViewer.dir/src/main.cpp.obj -MF CMakeFiles\DongImageViewer.dir\src\main.cpp.obj.d -o CMakeFiles\DongImageViewer.dir\src\main.cpp.obj -c D:\Development\DongImageViewer\src\main.cpp
 
 CMakeFiles/DongImageViewer.dir/src/main.cpp.i: cmake_force
@@ -102,7 +120,7 @@ CMakeFiles/DongImageViewer.dir/src/MainWindow.cpp.obj: CMakeFiles/DongImageViewe
 CMakeFiles/DongImageViewer.dir/src/MainWindow.cpp.obj: CMakeFiles/DongImageViewer.dir/includes_CXX.rsp
 CMakeFiles/DongImageViewer.dir/src/MainWindow.cpp.obj: D:/Development/DongImageViewer/src/MainWindow.cpp
 CMakeFiles/DongImageViewer.dir/src/MainWindow.cpp.obj: CMakeFiles/DongImageViewer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Development\DongImageViewer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DongImageViewer.dir/src/MainWindow.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Development\DongImageViewer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/DongImageViewer.dir/src/MainWindow.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DongImageViewer.dir/src/MainWindow.cpp.obj -MF CMakeFiles\DongImageViewer.dir\src\MainWindow.cpp.obj.d -o CMakeFiles\DongImageViewer.dir\src\MainWindow.cpp.obj -c D:\Development\DongImageViewer\src\MainWindow.cpp
 
 CMakeFiles/DongImageViewer.dir/src/MainWindow.cpp.i: cmake_force
@@ -117,7 +135,7 @@ CMakeFiles/DongImageViewer.dir/src/core/AppPaths.cpp.obj: CMakeFiles/DongImageVi
 CMakeFiles/DongImageViewer.dir/src/core/AppPaths.cpp.obj: CMakeFiles/DongImageViewer.dir/includes_CXX.rsp
 CMakeFiles/DongImageViewer.dir/src/core/AppPaths.cpp.obj: D:/Development/DongImageViewer/src/core/AppPaths.cpp
 CMakeFiles/DongImageViewer.dir/src/core/AppPaths.cpp.obj: CMakeFiles/DongImageViewer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Development\DongImageViewer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/DongImageViewer.dir/src/core/AppPaths.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Development\DongImageViewer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/DongImageViewer.dir/src/core/AppPaths.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DongImageViewer.dir/src/core/AppPaths.cpp.obj -MF CMakeFiles\DongImageViewer.dir\src\core\AppPaths.cpp.obj.d -o CMakeFiles\DongImageViewer.dir\src\core\AppPaths.cpp.obj -c D:\Development\DongImageViewer\src\core\AppPaths.cpp
 
 CMakeFiles/DongImageViewer.dir/src/core/AppPaths.cpp.i: cmake_force
@@ -132,7 +150,7 @@ CMakeFiles/DongImageViewer.dir/src/core/ImageLoader.cpp.obj: CMakeFiles/DongImag
 CMakeFiles/DongImageViewer.dir/src/core/ImageLoader.cpp.obj: CMakeFiles/DongImageViewer.dir/includes_CXX.rsp
 CMakeFiles/DongImageViewer.dir/src/core/ImageLoader.cpp.obj: D:/Development/DongImageViewer/src/core/ImageLoader.cpp
 CMakeFiles/DongImageViewer.dir/src/core/ImageLoader.cpp.obj: CMakeFiles/DongImageViewer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Development\DongImageViewer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/DongImageViewer.dir/src/core/ImageLoader.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Development\DongImageViewer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/DongImageViewer.dir/src/core/ImageLoader.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DongImageViewer.dir/src/core/ImageLoader.cpp.obj -MF CMakeFiles\DongImageViewer.dir\src\core\ImageLoader.cpp.obj.d -o CMakeFiles\DongImageViewer.dir\src\core\ImageLoader.cpp.obj -c D:\Development\DongImageViewer\src\core\ImageLoader.cpp
 
 CMakeFiles/DongImageViewer.dir/src/core/ImageLoader.cpp.i: cmake_force
@@ -147,7 +165,7 @@ CMakeFiles/DongImageViewer.dir/src/core/ThumbnailCache.cpp.obj: CMakeFiles/DongI
 CMakeFiles/DongImageViewer.dir/src/core/ThumbnailCache.cpp.obj: CMakeFiles/DongImageViewer.dir/includes_CXX.rsp
 CMakeFiles/DongImageViewer.dir/src/core/ThumbnailCache.cpp.obj: D:/Development/DongImageViewer/src/core/ThumbnailCache.cpp
 CMakeFiles/DongImageViewer.dir/src/core/ThumbnailCache.cpp.obj: CMakeFiles/DongImageViewer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Development\DongImageViewer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/DongImageViewer.dir/src/core/ThumbnailCache.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Development\DongImageViewer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/DongImageViewer.dir/src/core/ThumbnailCache.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DongImageViewer.dir/src/core/ThumbnailCache.cpp.obj -MF CMakeFiles\DongImageViewer.dir\src\core\ThumbnailCache.cpp.obj.d -o CMakeFiles\DongImageViewer.dir\src\core\ThumbnailCache.cpp.obj -c D:\Development\DongImageViewer\src\core\ThumbnailCache.cpp
 
 CMakeFiles/DongImageViewer.dir/src/core/ThumbnailCache.cpp.i: cmake_force
@@ -162,7 +180,7 @@ CMakeFiles/DongImageViewer.dir/src/core/Uri.cpp.obj: CMakeFiles/DongImageViewer.
 CMakeFiles/DongImageViewer.dir/src/core/Uri.cpp.obj: CMakeFiles/DongImageViewer.dir/includes_CXX.rsp
 CMakeFiles/DongImageViewer.dir/src/core/Uri.cpp.obj: D:/Development/DongImageViewer/src/core/Uri.cpp
 CMakeFiles/DongImageViewer.dir/src/core/Uri.cpp.obj: CMakeFiles/DongImageViewer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Development\DongImageViewer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/DongImageViewer.dir/src/core/Uri.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Development\DongImageViewer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/DongImageViewer.dir/src/core/Uri.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DongImageViewer.dir/src/core/Uri.cpp.obj -MF CMakeFiles\DongImageViewer.dir\src\core\Uri.cpp.obj.d -o CMakeFiles\DongImageViewer.dir\src\core\Uri.cpp.obj -c D:\Development\DongImageViewer\src\core\Uri.cpp
 
 CMakeFiles/DongImageViewer.dir/src/core/Uri.cpp.i: cmake_force
@@ -177,7 +195,7 @@ CMakeFiles/DongImageViewer.dir/src/core/Vfs.cpp.obj: CMakeFiles/DongImageViewer.
 CMakeFiles/DongImageViewer.dir/src/core/Vfs.cpp.obj: CMakeFiles/DongImageViewer.dir/includes_CXX.rsp
 CMakeFiles/DongImageViewer.dir/src/core/Vfs.cpp.obj: D:/Development/DongImageViewer/src/core/Vfs.cpp
 CMakeFiles/DongImageViewer.dir/src/core/Vfs.cpp.obj: CMakeFiles/DongImageViewer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Development\DongImageViewer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/DongImageViewer.dir/src/core/Vfs.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Development\DongImageViewer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/DongImageViewer.dir/src/core/Vfs.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DongImageViewer.dir/src/core/Vfs.cpp.obj -MF CMakeFiles\DongImageViewer.dir\src\core\Vfs.cpp.obj.d -o CMakeFiles\DongImageViewer.dir\src\core\Vfs.cpp.obj -c D:\Development\DongImageViewer\src\core\Vfs.cpp
 
 CMakeFiles/DongImageViewer.dir/src/core/Vfs.cpp.i: cmake_force
@@ -192,7 +210,7 @@ CMakeFiles/DongImageViewer.dir/src/core/ZipReader.cpp.obj: CMakeFiles/DongImageV
 CMakeFiles/DongImageViewer.dir/src/core/ZipReader.cpp.obj: CMakeFiles/DongImageViewer.dir/includes_CXX.rsp
 CMakeFiles/DongImageViewer.dir/src/core/ZipReader.cpp.obj: D:/Development/DongImageViewer/src/core/ZipReader.cpp
 CMakeFiles/DongImageViewer.dir/src/core/ZipReader.cpp.obj: CMakeFiles/DongImageViewer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Development\DongImageViewer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/DongImageViewer.dir/src/core/ZipReader.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Development\DongImageViewer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/DongImageViewer.dir/src/core/ZipReader.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DongImageViewer.dir/src/core/ZipReader.cpp.obj -MF CMakeFiles\DongImageViewer.dir\src\core\ZipReader.cpp.obj.d -o CMakeFiles\DongImageViewer.dir\src\core\ZipReader.cpp.obj -c D:\Development\DongImageViewer\src\core\ZipReader.cpp
 
 CMakeFiles/DongImageViewer.dir/src/core/ZipReader.cpp.i: cmake_force
@@ -202,6 +220,21 @@ CMakeFiles/DongImageViewer.dir/src/core/ZipReader.cpp.i: cmake_force
 CMakeFiles/DongImageViewer.dir/src/core/ZipReader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DongImageViewer.dir/src/core/ZipReader.cpp.s"
 	C:\Qt\Tools\mingw1310_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Development\DongImageViewer\src\core\ZipReader.cpp -o CMakeFiles\DongImageViewer.dir\src\core\ZipReader.cpp.s
+
+CMakeFiles/DongImageViewer.dir/qrc_resources.cpp.obj: CMakeFiles/DongImageViewer.dir/flags.make
+CMakeFiles/DongImageViewer.dir/qrc_resources.cpp.obj: CMakeFiles/DongImageViewer.dir/includes_CXX.rsp
+CMakeFiles/DongImageViewer.dir/qrc_resources.cpp.obj: qrc_resources.cpp
+CMakeFiles/DongImageViewer.dir/qrc_resources.cpp.obj: CMakeFiles/DongImageViewer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Development\DongImageViewer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/DongImageViewer.dir/qrc_resources.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DongImageViewer.dir/qrc_resources.cpp.obj -MF CMakeFiles\DongImageViewer.dir\qrc_resources.cpp.obj.d -o CMakeFiles\DongImageViewer.dir\qrc_resources.cpp.obj -c D:\Development\DongImageViewer\build\qrc_resources.cpp
+
+CMakeFiles/DongImageViewer.dir/qrc_resources.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DongImageViewer.dir/qrc_resources.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Development\DongImageViewer\build\qrc_resources.cpp > CMakeFiles\DongImageViewer.dir\qrc_resources.cpp.i
+
+CMakeFiles/DongImageViewer.dir/qrc_resources.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DongImageViewer.dir/qrc_resources.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Development\DongImageViewer\build\qrc_resources.cpp -o CMakeFiles\DongImageViewer.dir\qrc_resources.cpp.s
 
 # Object files for target DongImageViewer
 DongImageViewer_OBJECTS = \
@@ -213,7 +246,8 @@ DongImageViewer_OBJECTS = \
 "CMakeFiles/DongImageViewer.dir/src/core/ThumbnailCache.cpp.obj" \
 "CMakeFiles/DongImageViewer.dir/src/core/Uri.cpp.obj" \
 "CMakeFiles/DongImageViewer.dir/src/core/Vfs.cpp.obj" \
-"CMakeFiles/DongImageViewer.dir/src/core/ZipReader.cpp.obj"
+"CMakeFiles/DongImageViewer.dir/src/core/ZipReader.cpp.obj" \
+"CMakeFiles/DongImageViewer.dir/qrc_resources.cpp.obj"
 
 # External object files for target DongImageViewer
 DongImageViewer_EXTERNAL_OBJECTS =
@@ -227,9 +261,11 @@ DongImageViewer.exe: CMakeFiles/DongImageViewer.dir/src/core/ThumbnailCache.cpp.
 DongImageViewer.exe: CMakeFiles/DongImageViewer.dir/src/core/Uri.cpp.obj
 DongImageViewer.exe: CMakeFiles/DongImageViewer.dir/src/core/Vfs.cpp.obj
 DongImageViewer.exe: CMakeFiles/DongImageViewer.dir/src/core/ZipReader.cpp.obj
+DongImageViewer.exe: CMakeFiles/DongImageViewer.dir/qrc_resources.cpp.obj
 DongImageViewer.exe: CMakeFiles/DongImageViewer.dir/build.make
 DongImageViewer.exe: C:/Qt/6.11.1/mingw_64/lib/libQt6Widgets.a
 DongImageViewer.exe: C:/Qt/6.11.1/mingw_64/lib/libQt6Concurrent.a
+DongImageViewer.exe: C:/Qt/6.11.1/mingw_64/lib/libQt6Svg.a
 DongImageViewer.exe: C:/Qt/6.11.1/mingw_64/lib/libQt6Gui.a
 DongImageViewer.exe: C:/Qt/6.11.1/mingw_64/lib/libQt6Core.a
 DongImageViewer.exe: C:/Qt/6.11.1/mingw_64/lib/libQt6EntryPoint.a
@@ -237,7 +273,7 @@ DongImageViewer.exe: DongImageViewer.exe.manifest
 DongImageViewer.exe: CMakeFiles/DongImageViewer.dir/linkLibs.rsp
 DongImageViewer.exe: CMakeFiles/DongImageViewer.dir/objects1.rsp
 DongImageViewer.exe: CMakeFiles/DongImageViewer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\Development\DongImageViewer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable DongImageViewer.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\Development\DongImageViewer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable DongImageViewer.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\DongImageViewer.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -248,7 +284,7 @@ CMakeFiles/DongImageViewer.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles\DongImageViewer.dir\cmake_clean.cmake
 .PHONY : CMakeFiles/DongImageViewer.dir/clean
 
-CMakeFiles/DongImageViewer.dir/depend:
+CMakeFiles/DongImageViewer.dir/depend: qrc_resources.cpp
 	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\Development\DongImageViewer D:\Development\DongImageViewer D:\Development\DongImageViewer\build D:\Development\DongImageViewer\build D:\Development\DongImageViewer\build\CMakeFiles\DongImageViewer.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/DongImageViewer.dir/depend
 

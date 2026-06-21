@@ -178,6 +178,30 @@ DongImageViewer_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DongImageViewer.dir\build.make CMakeFiles/DongImageViewer.dir/DongImageViewer_autogen/mocs_compilation.cpp.s
 .PHONY : DongImageViewer_autogen/mocs_compilation.cpp.s
 
+qrc_resources.obj: qrc_resources.cpp.obj
+.PHONY : qrc_resources.obj
+
+# target to build an object file
+qrc_resources.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DongImageViewer.dir\build.make CMakeFiles/DongImageViewer.dir/qrc_resources.cpp.obj
+.PHONY : qrc_resources.cpp.obj
+
+qrc_resources.i: qrc_resources.cpp.i
+.PHONY : qrc_resources.i
+
+# target to preprocess a source file
+qrc_resources.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DongImageViewer.dir\build.make CMakeFiles/DongImageViewer.dir/qrc_resources.cpp.i
+.PHONY : qrc_resources.cpp.i
+
+qrc_resources.s: qrc_resources.cpp.s
+.PHONY : qrc_resources.s
+
+# target to generate assembly for a file
+qrc_resources.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DongImageViewer.dir\build.make CMakeFiles/DongImageViewer.dir/qrc_resources.cpp.s
+.PHONY : qrc_resources.cpp.s
+
 src/MainWindow.obj: src/MainWindow.cpp.obj
 .PHONY : src/MainWindow.obj
 
@@ -384,6 +408,9 @@ help:
 	@echo ... DongImageViewer_autogen/mocs_compilation.obj
 	@echo ... DongImageViewer_autogen/mocs_compilation.i
 	@echo ... DongImageViewer_autogen/mocs_compilation.s
+	@echo ... qrc_resources.obj
+	@echo ... qrc_resources.i
+	@echo ... qrc_resources.s
 	@echo ... src/MainWindow.obj
 	@echo ... src/MainWindow.i
 	@echo ... src/MainWindow.s

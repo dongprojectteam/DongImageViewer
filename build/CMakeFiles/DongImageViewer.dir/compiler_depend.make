@@ -162,6 +162,7 @@ CMakeFiles/DongImageViewer.dir/DongImageViewer_autogen/mocs_compilation.cpp.obj:
   C:/Qt/6.11.1/mingw_64/include/QtCore/qyieldcpu.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/QImage \
   C:/Qt/6.11.1/mingw_64/include/QtGui/QKeyEvent \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/QPixmapCache \
   C:/Qt/6.11.1/mingw_64/include/QtGui/QTransform \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qaction.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qbitmap.h \
@@ -182,11 +183,13 @@ CMakeFiles/DongImageViewer.dir/DongImageViewer_autogen/mocs_compilation.cpp.obj:
   C:/Qt/6.11.1/mingw_64/include/QtGui/qinputmethod.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qkeysequence.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qpaintdevice.h \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/qpainter.h \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/qpainterpath.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qpalette.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qpen.h \
-  C:/Qt/6.11.1/mingw_64/include/QtGui/qpicture.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qpixelformat.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qpixmap.h \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/qpixmapcache.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qpointingdevice.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qpolygon.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qregion.h \
@@ -194,9 +197,6 @@ CMakeFiles/DongImageViewer.dir/DongImageViewer_autogen/mocs_compilation.cpp.obj:
   C:/Qt/6.11.1/mingw_64/include/QtGui/qrgba64.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qscreen.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qscreen_platform.h \
-  C:/Qt/6.11.1/mingw_64/include/QtGui/qtextcursor.h \
-  C:/Qt/6.11.1/mingw_64/include/QtGui/qtextdocument.h \
-  C:/Qt/6.11.1/mingw_64/include/QtGui/qtextformat.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qtextoption.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qtgui-config.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qtguiexports.h \
@@ -209,24 +209,36 @@ CMakeFiles/DongImageViewer.dir/DongImageViewer_autogen/mocs_compilation.cpp.obj:
   C:/Qt/6.11.1/mingw_64/include/QtGui/qwindowdefs_win.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QComboBox \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QDockWidget \
-  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLabel \
-  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QListWidget \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGraphicsScene \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGraphicsView \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGridLayout \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMainWindow \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMenuBar \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QPushButton \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QScrollArea \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QTableWidget \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QToolBar \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractbutton.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractitemview.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractscrollarea.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractslider.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractspinbox.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qboxlayout.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qcombobox.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qdockwidget.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qframe.h \
-  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlabel.h \
-  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlistview.h \
-  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlistwidget.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgraphicsitem.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgraphicsscene.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgraphicsview.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgridlayout.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayout.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayoutitem.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmainwindow.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmenu.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmenubar.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qpushbutton.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qrubberband.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qscrollarea.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qsizepolicy.h \
@@ -517,6 +529,8 @@ CMakeFiles/DongImageViewer.dir/DongImageViewer_autogen/mocs_compilation.cpp.obj:
   D:/Development/DongImageViewer/src/core/VfsItem.h \
   D:/Development/DongImageViewer/src/core/ZipReader.h \
   DongImageViewer_autogen/UVLADIE3JM/moc_MainWindow.cpp
+
+CMakeFiles/DongImageViewer.dir/qrc_resources.cpp.obj: qrc_resources.cpp
 
 CMakeFiles/DongImageViewer.dir/src/MainWindow.cpp.obj: D:/Development/DongImageViewer/src/MainWindow.cpp \
   C:/Qt/6.11.1/mingw_64/include/QtConcurrent/QtConcurrent \
@@ -848,6 +862,7 @@ CMakeFiles/DongImageViewer.dir/src/MainWindow.cpp.obj: D:/Development/DongImageV
   C:/Qt/6.11.1/mingw_64/include/QtGui/QKeyEvent \
   C:/Qt/6.11.1/mingw_64/include/QtGui/QKeySequence \
   C:/Qt/6.11.1/mingw_64/include/QtGui/QPixmap \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/QPixmapCache \
   C:/Qt/6.11.1/mingw_64/include/QtGui/QTransform \
   C:/Qt/6.11.1/mingw_64/include/QtGui/QWheelEvent \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qaction.h \
@@ -869,10 +884,13 @@ CMakeFiles/DongImageViewer.dir/src/MainWindow.cpp.obj: D:/Development/DongImageV
   C:/Qt/6.11.1/mingw_64/include/QtGui/qinputmethod.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qkeysequence.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qpaintdevice.h \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/qpainter.h \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/qpainterpath.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qpalette.h \
-  C:/Qt/6.11.1/mingw_64/include/QtGui/qpicture.h \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/qpen.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qpixelformat.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qpixmap.h \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/qpixmapcache.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qpointingdevice.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qpolygon.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qregion.h \
@@ -880,7 +898,7 @@ CMakeFiles/DongImageViewer.dir/src/MainWindow.cpp.obj: D:/Development/DongImageV
   C:/Qt/6.11.1/mingw_64/include/QtGui/qrgba64.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qscreen.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qscreen_platform.h \
-  C:/Qt/6.11.1/mingw_64/include/QtGui/qtextdocument.h \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/qtextoption.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qtgui-config.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qtguiexports.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qtguiglobal.h \
@@ -894,18 +912,23 @@ CMakeFiles/DongImageViewer.dir/src/MainWindow.cpp.obj: D:/Development/DongImageV
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QComboBox \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QDockWidget \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QFileDialog \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGraphicsScene \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGraphicsView \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGridLayout \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QHBoxLayout \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QHeaderView \
-  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLabel \
-  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QListWidget \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMainWindow \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMenuBar \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMessageBox \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QPushButton \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QScrollArea \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QScrollBar \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QSplitter \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QStatusBar \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QTableWidget \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QToolBar \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractbutton.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractitemview.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractscrollarea.h \
@@ -919,15 +942,18 @@ CMakeFiles/DongImageViewer.dir/src/MainWindow.cpp.obj: D:/Development/DongImageV
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qdockwidget.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qfiledialog.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qframe.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgraphicsitem.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgraphicsscene.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgraphicsview.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgridlayout.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qheaderview.h \
-  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlabel.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayout.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayoutitem.h \
-  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlistview.h \
-  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlistwidget.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmainwindow.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmenu.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmenubar.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmessagebox.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qpushbutton.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qrubberband.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qscrollarea.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qscrollbar.h \
@@ -4326,6 +4352,7 @@ CMakeFiles/DongImageViewer.dir/src/main.cpp.obj: D:/Development/DongImageViewer/
   C:/Qt/6.11.1/mingw_64/include/QtCore/qyieldcpu.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/QImage \
   C:/Qt/6.11.1/mingw_64/include/QtGui/QKeyEvent \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/QPixmapCache \
   C:/Qt/6.11.1/mingw_64/include/QtGui/QTransform \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qaction.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qbitmap.h \
@@ -4346,10 +4373,13 @@ CMakeFiles/DongImageViewer.dir/src/main.cpp.obj: D:/Development/DongImageViewer/
   C:/Qt/6.11.1/mingw_64/include/QtGui/qinputmethod.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qkeysequence.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qpaintdevice.h \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/qpainter.h \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/qpainterpath.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qpalette.h \
-  C:/Qt/6.11.1/mingw_64/include/QtGui/qpicture.h \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/qpen.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qpixelformat.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qpixmap.h \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/qpixmapcache.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qpointingdevice.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qpolygon.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qregion.h \
@@ -4357,7 +4387,7 @@ CMakeFiles/DongImageViewer.dir/src/main.cpp.obj: D:/Development/DongImageViewer/
   C:/Qt/6.11.1/mingw_64/include/QtGui/qrgba64.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qscreen.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qscreen_platform.h \
-  C:/Qt/6.11.1/mingw_64/include/QtGui/qtextdocument.h \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/qtextoption.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qtgui-config.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qtguiexports.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qtguiglobal.h \
@@ -4370,25 +4400,37 @@ CMakeFiles/DongImageViewer.dir/src/main.cpp.obj: D:/Development/DongImageViewer/
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QApplication \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QComboBox \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QDockWidget \
-  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLabel \
-  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QListWidget \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGraphicsScene \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGraphicsView \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGridLayout \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMainWindow \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMenuBar \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QPushButton \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QScrollArea \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QTableWidget \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QToolBar \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractbutton.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractitemview.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractscrollarea.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractslider.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractspinbox.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qapplication.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qboxlayout.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qcombobox.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qdockwidget.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qframe.h \
-  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlabel.h \
-  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlistview.h \
-  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlistwidget.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgraphicsitem.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgraphicsscene.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgraphicsview.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgridlayout.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayout.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayoutitem.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmainwindow.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmenu.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmenubar.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qpushbutton.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qrubberband.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qscrollarea.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qsizepolicy.h \
@@ -4798,6 +4840,8 @@ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w6
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qcontainerfwd.h:
 
+C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGridLayout:
+
 C:/Qt/6.11.1/mingw_64/include/QtCore/q20iterator.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qcontiguouscache.h:
@@ -4868,6 +4912,8 @@ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/raointintrin.
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qassert.h:
 
+C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGraphicsPixmapItem:
+
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unordered_map.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qrangemodeladapter.h:
@@ -4901,6 +4947,8 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/qtextboundaryfinder.h:
 C:/Qt/6.11.1/mingw_64/include/QtCore/qcheckedint_impl.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/memory_resource.h:
+
+qrc_resources.cpp:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qcompilerdetection.h:
 
@@ -5000,6 +5048,8 @@ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/format:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qiodevice.h:
 
+C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMenuBar:
+
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/exception:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_relops.h:
@@ -5094,9 +5144,9 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/qprocessordetection.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qrect.h:
 
-C:/Qt/6.11.1/mingw_64/include/QtGui/qtextformat.h:
-
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/modified_bessel_func.tcc:
+
+C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGraphicsView:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qrefcount.h:
 
@@ -5208,8 +5258,6 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/q20chrono.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qsysinfo.h:
 
-C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlistview.h:
-
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/refwrap.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qtaggedpointer.h:
@@ -5302,6 +5350,8 @@ C:/Qt/6.11.1/mingw_64/include/QtGui/QImage:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/align.h:
 
+C:/Qt/6.11.1/mingw_64/include/QtGui/QPixmapCache:
+
 C:/Qt/6.11.1/mingw_64/include/QtGui/QKeyEvent:
 
 C:/Qt/6.11.1/mingw_64/include/QtGui/QTransform:
@@ -5309,8 +5359,6 @@ C:/Qt/6.11.1/mingw_64/include/QtGui/QTransform:
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr.h:
 
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/ctype.h:
-
-D:/Development/DongImageViewer/src/core/Metadata.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtGui/qaction.h:
 
@@ -5378,6 +5426,12 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/qpermissions.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtGui/qkeysequence.h:
 
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/clflushoptintrin.h:
+
+C:/Qt/6.11.1/mingw_64/include/QtGui/qpainter.h:
+
+C:/Qt/6.11.1/mingw_64/include/QtGui/qpainterpath.h:
+
 C:/Qt/6.11.1/mingw_64/include/QtGui/qpalette.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_uninitialized.h:
@@ -5386,13 +5440,9 @@ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w6
 
 C:/Qt/6.11.1/mingw_64/include/QtGui/qpen.h:
 
+C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGraphicsScene:
+
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/limits:
-
-C:/Qt/6.11.1/mingw_64/include/QtWidgets/QScrollBar:
-
-C:/Qt/6.11.1/mingw_64/include/QtGui/qpicture.h:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/clocale:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qxpfunctional.h:
 
@@ -5400,15 +5450,19 @@ C:/Qt/6.11.1/mingw_64/include/QtGui/qpixelformat.h:
 
 D:/Development/DongImageViewer/src/MainWindow.cpp:
 
+D:/Development/DongImageViewer/src/core/ArchivePolicy.h:
+
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/concept_check.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/postypes.h:
 
-D:/Development/DongImageViewer/src/core/ArchivePolicy.h:
-
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512ifmaintrin.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtGui/qpixmap.h:
+
+C:/Qt/6.11.1/mingw_64/include/QtGui/qpixmapcache.h:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unordered_set.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h:
 
@@ -5419,12 +5473,6 @@ C:/Qt/6.11.1/mingw_64/include/QtGui/qpolygon.h:
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/algorithmfwd.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtGui/qscreen.h:
-
-C:/Qt/6.11.1/mingw_64/include/QtGui/qtextcursor.h:
-
-C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/corecrt.h:
-
-C:/Qt/6.11.1/mingw_64/include/QtGui/qtextdocument.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtGui/qtguiexports.h:
 
@@ -5438,11 +5486,11 @@ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractscrollarea.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/debug/debug.h:
 
+D:/Development/DongImageViewer/src/core/LruCache.h:
+
 C:/Qt/6.11.1/mingw_64/include/QtGui/qvalidator.h:
 
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_timeval.h:
-
-D:/Development/DongImageViewer/src/core/LruCache.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdint:
 
@@ -5466,15 +5514,13 @@ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QDockWidget:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/list:
 
-C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLabel:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/hypergeometric.tcc:
-
-C:/Qt/6.11.1/mingw_64/include/QtCore/qoperatingsystemversion.h:
-
-C:/Qt/6.11.1/mingw_64/include/QtWidgets/QListWidget:
-
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMainWindow:
+
+C:/Qt/6.11.1/mingw_64/include/QtCore/qcollator.h:
+
+C:/Qt/6.11.1/mingw_64/include/QtCore/QMimeData:
+
+C:/Qt/6.11.1/mingw_64/include/QtWidgets/QPushButton:
 
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/QTableWidget:
 
@@ -5486,15 +5532,29 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/qsettings.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/QToolBar:
 
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/random:
+
+C:/Qt/6.11.1/mingw_64/include/QtCore/qtransposeproxymodel.h:
+
+C:/Qt/6.11.1/mingw_64/include/QtCore/qparallelanimationgroup.h:
+
+C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractbutton.h:
+
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/concurrence.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractitemdelegate.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/chrono:
 
+D:/Development/DongImageViewer/src/core/ThumbnailCache.h:
+
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractslider.h:
 
-D:/Development/DongImageViewer/src/core/ThumbnailCache.h:
+C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/sec_api/string_s.h:
+
+C:/Qt/6.11.1/mingw_64/include/QtWidgets/qboxlayout.h:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h:
 
 D:/Development/DongImageViewer/src/main.cpp:
 
@@ -5504,13 +5564,43 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/qdatetime.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/qframe.h:
 
-C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlabel.h:
+C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgraphicsitem.h:
 
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_pair.h:
+C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/crtdefs.h:
 
-C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlistwidget.h:
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iterator:
+
+C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgraphicsscene.h:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/atomic_wait.h:
+
+C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgraphicsview.h:
+
+C:/Qt/6.11.1/mingw_64/include/QtCore/qtranslator.h:
+
+C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgridlayout.h:
+
+C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/zlib.h:
+
+C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayout.h:
+
+C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayoutitem.h:
+
+C:/Qt/6.11.1/mingw_64/include/QtWidgets/qstyle.h:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_memory_defs.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmainwindow.h:
+
+C:/Qt/6.11.1/mingw_64/include/QtCore/qstandardpaths.h:
+
+C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmenu.h:
+
+C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmenubar.h:
+
+C:/Qt/6.11.1/mingw_64/include/QtWidgets/qpushbutton.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/qrubberband.h:
 
@@ -5523,14 +5613,6 @@ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qsizepolicy.h:
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/type_traits.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/qslider.h:
-
-C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayoutitem.h:
-
-C:/Qt/6.11.1/mingw_64/include/QtWidgets/qstyle.h:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_memory_defs.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/QtCore:
 
@@ -5583,10 +5665,6 @@ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/atom
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/legendre_function.tcc:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cwctype:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iterator:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/atomic_wait.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_ios.h:
 
@@ -5698,8 +5776,6 @@ C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/pthread_signal.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_util.h:
 
-C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/sys/types.h:
-
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/specfun.h:
@@ -5748,6 +5824,8 @@ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_numeric.h:
 
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_pair.h:
+
 C:/Qt/6.11.1/mingw_64/include/QtCore/qfilesystemwatcher.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_tempbuf.h:
@@ -5772,8 +5850,6 @@ C:/Qt/6.11.1/mingw_64/include/QtConcurrent/qtaskbuilder.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unique_ptr.h:
 
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unordered_set.h:
-
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uses_allocator.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/utility.h:
@@ -5797,6 +5873,10 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/qmessageauthenticationcode.h:
 C:/Qt/6.11.1/mingw_64/include/QtCore/q23functional.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/climits:
+
+C:/Qt/6.11.1/mingw_64/include/QtWidgets/QScrollBar:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/clocale:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/concepts:
 
@@ -5844,9 +5924,9 @@ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_f
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/numbers:
 
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/optional:
-
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wctype.h:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/optional:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/execution_defs.h:
 
@@ -5884,6 +5964,8 @@ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/gamma
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdarg.h:
 
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/hypergeometric.tcc:
+
 C:/Qt/6.11.1/mingw_64/include/QtCore/QFileInfo:
 
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/QApplication:
@@ -5916,23 +5998,17 @@ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w6
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h:
 
-C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/sec_api/string_s.h:
-
-C:/Qt/6.11.1/mingw_64/include/QtWidgets/qboxlayout.h:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h:
-
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/atomic_futex.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/syslimits.h:
 
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw_secapi.h:
 
+C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/corecrt.h:
+
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/corecrt_stdio_config.h:
 
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/corecrt_wstdlib.h:
-
-C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/crtdefs.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qpromise.h:
 
@@ -5950,8 +6026,6 @@ C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/pthread_unistd.h:
 
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h:
 
-D:/Development/DongImageViewer/src/core/ImageLoader.h:
-
 C:/Qt/6.11.1/mingw_64/include/QtCore/qtyperevision.h:
 
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h:
@@ -5961,6 +6035,8 @@ C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/signal.h:
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/stdarg.h:
 
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/sys/timeb.h:
+
+C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/sys/types.h:
 
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h:
 
@@ -5975,6 +6051,10 @@ C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h:
 D:/Development/DongImageViewer/src/MainWindow.h:
 
 D:/Development/DongImageViewer/src/core/ImageData.h:
+
+D:/Development/DongImageViewer/src/core/ImageLoader.h:
+
+D:/Development/DongImageViewer/src/core/Metadata.h:
 
 D:/Development/DongImageViewer/src/core/Vfs.h:
 
@@ -6027,10 +6107,6 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/QDeadlineTimer:
 C:/Qt/6.11.1/mingw_64/include/QtCore/QFile:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/QHash:
-
-C:/Qt/6.11.1/mingw_64/include/QtCore/qcollator.h:
-
-C:/Qt/6.11.1/mingw_64/include/QtCore/QMimeData:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/QStringList:
 
@@ -6134,11 +6210,7 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/qmetasequence.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qmimedatabase.h:
 
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/random:
-
-C:/Qt/6.11.1/mingw_64/include/QtCore/qtransposeproxymodel.h:
-
-C:/Qt/6.11.1/mingw_64/include/QtCore/qparallelanimationgroup.h:
+C:/Qt/6.11.1/mingw_64/include/QtCore/qoperatingsystemversion.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qpauseanimation.h:
 
@@ -6172,8 +6244,6 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/qsocketnotifier.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qstack.h:
 
-C:/Qt/6.11.1/mingw_64/include/QtCore/qstandardpaths.h:
-
 C:/Qt/6.11.1/mingw_64/include/QtCore/qstaticlatin1stringmatcher.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_thread.h:
@@ -6191,10 +6261,6 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/qthread.h:
 C:/Qt/6.11.1/mingw_64/include/QtCore/qthreadpool.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qtimeline.h:
-
-C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgridlayout.h:
-
-C:/Qt/6.11.1/mingw_64/include/QtCore/qtranslator.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mwaitintrin.h:
 
@@ -6237,10 +6303,6 @@ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qfiledialog.h:
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/clzerointrin.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/qheaderview.h:
-
-C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/zlib.h:
-
-C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayout.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/qsplitter.h:
 
@@ -6311,8 +6373,6 @@ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/semaphore
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/stop_token:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/cetintrin.h:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/clflushoptintrin.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/fxsrintrin.h:
 

@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/DongImageViewer.dir/DongImageViewer_autogen/mocs_compilation.cpp.obj"
   "CMakeFiles/DongImageViewer.dir/DongImageViewer_autogen/mocs_compilation.cpp.obj.d"
+  "CMakeFiles/DongImageViewer.dir/qrc_resources.cpp.obj"
+  "CMakeFiles/DongImageViewer.dir/qrc_resources.cpp.obj.d"
   "CMakeFiles/DongImageViewer.dir/src/MainWindow.cpp.obj"
   "CMakeFiles/DongImageViewer.dir/src/MainWindow.cpp.obj.d"
   "CMakeFiles/DongImageViewer.dir/src/core/AppPaths.cpp.obj"
@@ -24,6 +26,7 @@ file(REMOVE_RECURSE
   "DongImageViewer.exe.manifest"
   "DongImageViewer.pdb"
   "libDongImageViewer.dll.a"
+  "qrc_resources.cpp"
 )
 
 # Per-language clean rules from dependency scanning.
